@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: app-s3-test
+spec:
+  containers:
+  - name: busybox
+    image: busybox:1.36
+    command: ["/bin/sh", "-c", "while true; do date >> /data/out.txt; sleep 5; done"]
+    volumeMounts:
+    - name: vol
+      mountPath: /data
+  volumes:
+  - name: vol
+    persistentVolumeClaim:
+      claimName: demo-pvc-minio-s3

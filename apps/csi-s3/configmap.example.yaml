@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: csi-s3-config
+  namespace: kube-system
+data:
+  endpoint: "http://<MINIO_ENDPOINT>"  # ex: http://minio.minio.svc.cluster.local:9000 ou http://<LB_IP>:9000
+  usePathStyle: "true"
+  region: "us-east-1"

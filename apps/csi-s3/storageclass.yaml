@@ -1,0 +1,15 @@
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: minio-s3-csi
+provisioner: ru.yandex.s3.csi
+parameters:
+  mounter: geesefs
+  bucket: k8s-volumes
+  prefix: "pvc"
+  endpoint: "http://<MINIO_ENDPOINT>"
+  region: "us-east-1"
+  usePathStyle: "true"
+reclaimPolicy: Delete
+volumeBindingMode: Immediate
+allowVolumeExpansion: false

@@ -1,0 +1,9 @@
+# Valores de exemplo (não referenciados pela Application pois usamos helm.values inline).
+auth:
+  rootUser: minioadmin
+  rootPassword: minioadmin
+persistence:
+  enabled: true
+  size: 100Gi
+service:
+  type: LoadBalancer
