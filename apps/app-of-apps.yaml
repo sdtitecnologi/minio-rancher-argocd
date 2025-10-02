@@ -12,6 +12,7 @@ spec:
     directory:
       recurse: true
       include: "**/application.yaml"
+      exclude: "**/kustomization.yaml"
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
