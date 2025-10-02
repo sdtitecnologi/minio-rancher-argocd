@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/OWNER/REPO
+    repoURL: https://github.com/sdtitecnologi/minio-rancher-argocd
     targetRevision: HEAD
     path: apps/examples
   destination:
